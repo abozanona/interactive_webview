@@ -1,5 +1,10 @@
 #import "InteractiveWebviewPlugin.h"
+#if __has_include(<flutter_plugin/interactive_webview-Swift.h>)
+#import <flutter_plugin/flutter_plugin-Swift.h>
+#else
 #import <interactive_webview/interactive_webview-Swift.h>
+#import "interactive_webview-Swift.h"
+#endif
 
 @implementation InteractiveWebviewPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
